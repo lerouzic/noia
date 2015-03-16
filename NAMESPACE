@@ -1,0 +1,8 @@
+export(linearRegression, multilinearRegression, geneticEffects, GPmap, varianceDecomposition, simulatePop, effectsNamesGeneral, effectsNamesMultilinear, genNames, linearGPmapanalysis)
+S3method(print, noia.linear)
+S3method(print, noia.linear.gpmap)
+S3method(print, noia.multilinear)
+S3method(print, noia.vardec)
+S3method(plot, noia.linear)
+S3method(barplot, noia.gpmap)
+import(stats, graphics)
