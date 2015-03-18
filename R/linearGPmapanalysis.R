@@ -16,6 +16,7 @@ function (gmap, reference = "F2", freqmat = NULL, max.level = NULL,
         }
         return(vector)
     }
+    if ("noia.gpmap" %in% class(gmap)) gmap <- gmap[,"G.val"]
     gmap <- as.matrix(gmap)
     nloci <- round(log(length(gmap), 3))
     if (is.null(S_full)) {
