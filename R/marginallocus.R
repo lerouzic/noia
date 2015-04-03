@@ -9,7 +9,7 @@ function (gmap, freq=NULL, what="mean", definition=11, mc.cores=1, ...)
 	if (length(freq) != nloc) stop("Invalid frequency vector (different length than the number of loci)")
 	
 	if (mc.cores > 1) {
-		if (!require(parallel))
+		if (!requireNamespace("parallel", quietly=TRUE))
 			mc.cores <- 1
 	}
 	if (mc.cores == 1)

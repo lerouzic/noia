@@ -1,5 +1,5 @@
 lGPaextract <-
-function(gmap, freqmat, what="mean", reference="G2A", ...) {
+function(gmap, freq, what="mean", reference="G2A", ...) {
 	# what = "mean", "varG", "varA", dvarA.dt
 	mask <- function(effect='a', nloc) {
 		sapply(1:nloc, function(i) {
@@ -8,7 +8,7 @@ function(gmap, freqmat, what="mean", reference="G2A", ...) {
 				tmp.mask })
 	}
 	
-	lGPa <- linearGPmapanalysis(gmap=gmap, freqmat=freqmat, reference=reference, ...)
+	lGPa <- linearGPmapanalysis(gmap=gmap, freqmat=freq, reference=reference, ...)
 	ans <- switch(what, 
 		mean={
 			lGPa$E[1]
@@ -20,11 +20,12 @@ function(gmap, freqmat, what="mean", reference="G2A", ...) {
 			sum(lGPa$variances[mask('a', lGPa$nloc)])
 		},
 		dvarA.dt={
-			if (!require(numDeriv)) stop("Library numDeriv is necessary to compute gradients")
+			if (!requireNamespace("numDeriv", quietly=TRUE)) 
+				stop("Library numDeriv is necessary to compute gradients")
 			dvarA.dp <- 
-				grad(function(frq) lGPaextract(gmap, frq, what="varA", reference=reference, ...), freqmat)
+				numDeriv::grad(function(frq) lGPaextract(gmap, frq, what="varA", reference=reference, ...), freq)
 			alphas <- lGPa$E[mask('a', lGPa$nloc)]
-			dp.dt <- alphas*freqmat*(1-freqmat)
+			dp.dt <- alphas*freq*(1-freq)
 			sum(dvarA.dp * dp.dt)
 		},
 		stop("Unknown \"what\" value")
