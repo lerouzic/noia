@@ -1,7 +1,7 @@
 marginallocus <- 
 function (gmap, freq=NULL, what="mean", definition=11, mc.cores=1, ...)
 {
-	# So far: only Hardy-Weinberg proportions (and thus, GTA model)
+	# So far: only Hardy-Weinberg proportions (and thus, G2A model)
 	# ...: arguments to linearGPmapanalysis
 	if (class(gmap) == "noia.gpmap") gmap <- gmap$G.val
 	nloc <- round(log(length(gmap))/log(3))
@@ -24,5 +24,8 @@ function (gmap, freq=NULL, what="mean", definition=11, mc.cores=1, ...)
 	ans <- mclapply(freq.list, function(frq) {
 		return(lGPaextract(gmap=gmap, freq=frq, what=what, ...))
 	}, mc.cores=mc.cores)
-	return(array(unlist(ans), dim=rep(definition, num.loctest), dimnames=lapply(1:num.loctest, function(i) paste0("p",i,"|",format(freq.test, digits=2)))))
+	ans <- array(unlist(ans), dim=rep(definition, num.loctest), dimnames=lapply(1:num.loctest, function(i) paste0("p",i,"|",format(freq.test, digits=2))))
+	attr(ans, "what") <- what
+	class(ans) <- c("noia.marloc", class(ans))
+	return(ans)
 }
