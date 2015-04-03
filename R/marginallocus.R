@@ -14,6 +14,8 @@ function (gmap, freq=NULL, what="mean", definition=11, mc.cores=1, ...)
 	}
 	if (mc.cores == 1)
 		mclapply <- function(..., mc.cores) lapply(...)
+	else
+		mclapply <- parallel::mclapply
 	
 	num.loctest <- sum(is.na(freq))
 	freq.test <- seq(from=0, to=1, length.out=definition)
