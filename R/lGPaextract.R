@@ -25,7 +25,9 @@ function(gmap, freq, what="mean", reference="G2A", ...) {
 			dvarA.dp <- 
 				numDeriv::grad(function(frq) lGPaextract(gmap, frq, what="varA", reference=reference, ...), freq)
 			alphas <- lGPa$E[mask('a', lGPa$nloc)]
-			dp.dt <- alphas*freq*(1-freq)
+			# in NOIA, p is the frequency of allele 2,
+			# and p decreases when alpha increases (I think)
+			dp.dt <- -alphas*freq*(1-freq)
 			sum(dvarA.dp * dp.dt)
 		},
 		stop("Unknown \"what\" value")
