@@ -5,7 +5,7 @@ function (obj, reference = "P1", ref.genotype = NULL)
         warning("The use of ref.genotype is obsolete. Use reference= instead")
         reference = ref.genotype
     }
-    if (class(obj) == "noia.linear") {
+    if (inherits(obj, "noia.linear")) {
         new.smat <- genZ2S(obj$genZ, reference = reference)
         new.smat <- solve(new.smat)
         new.smat <- new.smat[colnames(obj$smat), ]
@@ -16,7 +16,7 @@ function (obj, reference = "P1", ref.genotype = NULL)
         colnames(ans) <- c("Effects", "Std.err")
         return(ans)
     }
-    else if (class(obj) == "noia.multilinear") {
+    else if (inherits(obj, "noia.multilinear")) {
         stop("Change of reference for the multilinear model: not implemented.")
     }
     else {

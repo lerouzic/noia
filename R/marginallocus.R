@@ -3,7 +3,7 @@ function (gmap, freq=NULL, what="mean", definition=11, mc.cores=1, ...)
 {
 	# So far: only Hardy-Weinberg proportions (and thus, G2A model)
 	# ...: arguments to linearGPmapanalysis
-	if (class(gmap) == "noia.gpmap") gmap <- gmap$G.val
+	if (inherits(gmap, "noia.gpmap")) gmap <- gmap$G.val
 	nloc <- round(log(length(gmap))/log(3))
 	if (is.null(freq)) freq <- rep(NA, nloc)
 	if (length(freq) != nloc) stop("Invalid frequency vector (different length than the number of loci)")

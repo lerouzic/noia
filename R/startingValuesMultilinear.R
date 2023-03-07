@@ -1,7 +1,7 @@
 startingValuesMultilinear <-
 function (noia.multilinear, max.level = 2, max.dom = 2, e.unique = FALSE) 
 {
-    if (class(noia.multilinear) != "noia.multilinear") {
+    if (!inherits(noia.multilinear, "noia.multilinear")) {
         stop("Object of class \"noia.multilinear\" expected\n")
     }
     a <- noia::effectsNames[2]

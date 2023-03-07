@@ -1,7 +1,7 @@
 simulatePop <-
 function (gmap, N = 100, sigmaE = 1, type = "F2", freqmat = NULL) 
 {
-    if ("noia.gpmap" %in% class(gmap)) gmap <- gmap[,"G.val"]
+    if (inherits(gmap, "noia.gpmap")) gmap <- gmap[,"G.val"]
     nloc <- log(length(gmap))/log(3)
     ans <- NULL
     n <- genNames(nloc)

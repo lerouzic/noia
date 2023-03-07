@@ -6,11 +6,11 @@ function (reg, max.level = 2, max.dom = 2, e.unique = FALSE,
         return(startingValuesNothing(nloc, max.level, max.dom, 
             e.unique))
     }
-    else if (class(reg) == "noia.linear") {
+    else if (inherits(reg, "noia.linear")) {
         return(startingValuesLinear(reg, max.level, max.dom, 
             e.unique))
     }
-    else if (class(reg) == "noia.multilinear") {
+    else if (inherits(reg, "noia.multilinear")) {
         return(startingValuesMultilinear(reg, max.level, max.dom, 
             e.unique))
     }

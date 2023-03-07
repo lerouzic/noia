@@ -2,7 +2,7 @@ startingValuesLinear <-
 function (noia.linear, max.level = 2, max.dom = 2, e.unique = FALSE, 
     e.init = TRUE) 
 {
-    if (class(noia.linear) != "noia.linear") {
+    if (!inherits(noia.linear, "noia.linear")) {
         stop("Object of class \"noia.linear\" expected\n")
     }
     a <- noia::effectsNames[2]

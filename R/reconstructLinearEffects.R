@@ -1,7 +1,7 @@
 reconstructLinearEffects <-
 function (noia.multilinear) 
 {
-    if (class(noia.multilinear) != "noia.multilinear") {
+    if (!inherits(noia.multilinear, "noia.multilinear")) {
         stop("Object of class \"multilinear\" expected\n")
     }
     a <- noia::effectsNames[2]

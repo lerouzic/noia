@@ -1,7 +1,7 @@
 effectsPvalues <-
 function (reg) 
 {
-    if ((class(reg) != "lm") && (class(reg) != "nls")) {
+    if (!inherits(reg, "lm") && !inherits(reg, "nls")) {
         stop("Object of class \"lm\" expected\n")
     }
     summary.effects <- summary(reg)
