@@ -1,8 +1,8 @@
 Package: noia
 Type: Package
-Title: Implementation of the Natural and Orthogonal InterAction (NOIA) model
-Version: 0.97.2
-Date: 2015-08-05
+Title: Implementation of the Natural and Orthogonal InterAction (NOIA) Model
+Version: 0.97.3
+Date: 2023-03-07
 Author: Arnaud Le Rouzic (2007-2015),  Arne B. Gjuvsland (2010), Olivier Ariste (2010)
 Maintainer: Arnaud Le Rouzic <arnaud.le-rouzic@universite-paris-saclay.fr>
 Depends: stats

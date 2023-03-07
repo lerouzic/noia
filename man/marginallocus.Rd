@@ -14,8 +14,9 @@ for a combination of allele frequencies, based on a genotype-phenotype map.
 \usage{
 marginallocus(gmap, freq=NULL, what="mean", definition=11, mc.cores=1, ...)
 \method{plot}{noia.marloc}(x, xlab=NULL, ylim=NULL, ylab=attr(x, "what"), ...)
-\method{image}{noia.marloc}(x, xlab=NULL, ylab=NULL, zlim=NULL, main=attr(x, "what"), col.max="red", col.min="blue", col.zero="white", 
-	n.cols=1000, zeropart=0.01, contour.levels=10, contour.options=list(), ...) 
+\method{image}{noia.marloc}(x, xlab=NULL, ylab=NULL, zlim=NULL, 
+      main=attr(x, "what"), col.max="red", col.min="blue", col.zero="white", 
+      n.cols=1000, zeropart=0.01, contour.levels=10, contour.options=list(), ...) 
 }
 
 \arguments{
