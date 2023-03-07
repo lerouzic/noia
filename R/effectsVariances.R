@@ -5,7 +5,7 @@ function (obj)
         stop("Unexpected object of class \"", class(obj), "\"\n")
     }
     v <- NULL
-    if (inherits(obj, "noia.linear") && is.null(obj$zmat)) || 
+    if (inherits(obj, "noia.linear") && is.null(obj$zmat) || 
         is.null(obj$smat)) {
         v <- rep(NA, length(obj$E))
     }
