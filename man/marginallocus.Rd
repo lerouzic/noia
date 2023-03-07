@@ -42,7 +42,7 @@ marginallocus(gmap, freq=NULL, what="mean", definition=11, mc.cores=1, ...)
 	\code{marginallocus} returns an array with as many dimensions as loci under investigation. This array is an object of class \code{"noia.marloc"} which can be graphically illustrated through the provided \code{plot} (for 1-dimensional data) and \code{image} (for 2-dimensional data). Arrays of higher dimensionality cannot be represented graphically.
 }
 
-\author{ Arnaud Le Rouzic <lerouzic@egce.cnrs-gif.fr> }
+\author{ Arnaud Le Rouzic }
 
 \seealso{ \code{\link{linearGPmapanalysis}} }
 \examples{

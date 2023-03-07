@@ -63,7 +63,7 @@ Zeng ZB, Wang T, Zou W. (2005). Modelling quantitative trait loci and
     interpretation of models. Genetics 169: 1711-1725. 
  }
  
-\author{ Arnaud Le Rouzic <a.p.s.lerouzic@bio.uio.no> }
+\author{ Arnaud Le Rouzic }
 
 \seealso{ \code{\link{geneticEffects}}, \code{\link{GPmap}}, \code{\link{varianceDecomposition}}. }
 

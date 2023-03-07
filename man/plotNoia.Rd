@@ -39,6 +39,6 @@ arrowscol = "purple", stderr = TRUE , main=NA, ylab=NA, ...)
     \code{\link{barplot}} routines. }
 }
 
-\author{ Olivier Ariste, Arnaud Le Rouzic <lerouzic@legs.cnrs-gif.fr> }
+\author{ Olivier Ariste, Arnaud Le Rouzic }
 
 \keyword{ plot }

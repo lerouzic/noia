@@ -49,7 +49,7 @@ Zeng ZB, Wang T, Zou W. (2005). Modelling quantitative trait loci and
     interpretation of models. Genetics 169: 1711-1725. 
  }
  
-\author{ Arne B. Gjuvsland <arne.gjuvsland@umb.no> }
+\author{ Arne B. Gjuvsland }
 
 \seealso{ \code{\link{varianceDecomposition}} }
 

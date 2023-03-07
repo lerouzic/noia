@@ -51,7 +51,7 @@ Lynch M, Walsh B (1998) Genetics and Analysis of Quantitative Traits.
 Sunderland, MA; Sinauer Associates. 
  }
  
-\author{ Arnaud Le Rouzic <a.p.s.lerouzic@bio.uio.no> }
+\author{ Arnaud Le Rouzic }
 
 \seealso{ \code{\link{linearRegression}} }
 \examples{

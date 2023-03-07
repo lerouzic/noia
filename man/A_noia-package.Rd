@@ -48,7 +48,7 @@ License: \tab GPL-2\cr
 \author{
 Arnaud Le Rouzic, Arne B. Gjuvsland
 
-Maintainer: Arnaud Le Rouzic <a.p.s.lerouzic@bio.uio.no>, , Arne B. Gjuvsland <arne.gjuvsland@umb.no>
+Maintainer: Arnaud Le Rouzic
 }
 \references{
 Alvarez-Castro JM, Carlborg O. (2007). A unified model for functional 
